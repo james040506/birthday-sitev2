@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Mami!!!!!!!!!!!!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffe6f0, #fff0f5);
+        }
+
+        h1 {
+            color: #ff4d6d;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            background-color: #ff99cc;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        #gallery img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>For Mami</h1>
+
+    <button onclick="showEverything()">Click</button>
+
+    <div id="message"></div>
+
+    <div id="gallery">
+        <img src="mommy1.jpeg">
+        <img src="mommy2.jpeg">
+        <img src="mommy3.jpeg">
+        <img src="mommy4.jpeg">
+        <img src="mommy5.jpeg">
+        <img src="mommy6.jpeg">
+        <img src="mommy7.jpeg">
+        <img src="mommy8.jpeg">
+    </div>
+
+    <audio id="music">
+        <source src="mgsvbirthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function showEverything() {
+            document.getElementById("message").innerHTML =
+                "🎂 Happy Birthday Mami! 🎂<br>Thank you for everything you have done for us <br>Love you always 💖";
+
+            document.getElementById("music").play();
+
+            const images = document.querySelectorAll('#gallery img');
+
+            images.forEach((img, index) => {
+                setTimeout(() => {
+                    img.style.display = "inline-block";
+                }, index * 4200);
+            });
+        }
+    </script>
+
+</body>
+</html>
